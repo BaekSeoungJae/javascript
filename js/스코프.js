@@ -27,16 +27,26 @@
 // console.log(`코드 블록 외부 b : ${b}`);
 
 // 참조 우선순위
-let a = 10;
-const b = 20;
-function sum2() {
-  let a = 50;
-  const b = 70;
-  console.log(`함수 내부 a : ${a}`);
-  console.log(`함수 내부 b : ${b}`);
-}
-sum2();
-console.log(`함수 외부 a : ${a}`);
-console.log(`함수 외부 b : ${b}`);
+// let a = 10;
+// const b = 20;
+// function sum2() {
+//   let a = 50;
+//   const b = 70;
+//   console.log(`함수 내부 a : ${a}`);
+//   console.log(`함수 내부 b : ${b}`);
+// }
+// sum2();
+// console.log(`함수 외부 a : ${a}`);
+// console.log(`함수 외부 b : ${b}`);
 
 // 즉시 실행 함수 : 함수를 정의하자마자 바로 실행하는 함수
+(function (){
+  width = 500;
+  height = 300;
+  console.log(`너비 : ${width}, 높이 : ${height}`);
+  init();
+}) ();
+
+function init() {
+  console.log("프로그램 실행을 위해서 초기화 작업 수행 중....");
+}
